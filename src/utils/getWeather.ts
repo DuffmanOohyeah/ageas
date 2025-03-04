@@ -53,7 +53,6 @@ const get = async (
 
 		if (response.ok && response.status === 200) {
 			weatherResults = await response.json();
-			// console.log('weatherResults:', weatherResults);
 		} else {
 			/* there was an error during the api call; log it, display to screen, etc. */
 		}

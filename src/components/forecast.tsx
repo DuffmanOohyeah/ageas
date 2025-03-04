@@ -8,8 +8,7 @@ import { convert } from '../utils/weatherCode';
 import moment from 'moment';
 import { UrlParamProps } from '../utils/urlParams';
 
-const Forecast = (props: UrlParamProps): JSX.Element => {
-	const { lat, lng } = props;
+const Forecast = ({ lat, lng }: UrlParamProps): JSX.Element => {
 	const [weatherResults, setWeatherResults] =
 		useState<WeatherResultProps>(defaultResults);
 
@@ -17,7 +16,6 @@ const Forecast = (props: UrlParamProps): JSX.Element => {
 		const wr = async (): Promise<void> => {
 			const data: WeatherResultProps = await getWeather(lat, lng);
 			setWeatherResults(data);
-			// console.log('data:', data);
 		};
 		wr();
 	}, [lat, lng]);

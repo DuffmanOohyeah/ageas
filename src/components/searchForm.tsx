@@ -13,8 +13,7 @@ const getSearchVal = (sf: RefObject<any>): string => {
 	return cityVal;
 };
 
-const SearchForm = (props: UrlParamProps): JSX.Element => {
-	const { lat, lng } = props;
+const SearchForm = ({ lat, lng }: UrlParamProps): JSX.Element => {
 	const searchForm = useRef<any>(null);
 	const [city, setCity] = useState<string>('');
 	const [geoResults, setGeoResults] = useState<GeoResultsProps[]>([]);

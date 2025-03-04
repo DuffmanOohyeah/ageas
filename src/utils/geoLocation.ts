@@ -36,7 +36,6 @@ const get = async (
 		/* there was an error during the api call; log it, display to screen, etc. */
 	}
 
-	// console.log('geoResults:', geoResults);
 	return geoResults;
 };
 
