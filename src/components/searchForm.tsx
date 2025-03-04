@@ -36,6 +36,7 @@ const SearchForm = (props: UrlParamProps): JSX.Element => {
 						type='text'
 						value={city}
 						id='city'
+						className='shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight'
 						onChange={(evt) => {
 							evt.preventDefault();
 							setCity(getSearchVal(searchForm));
